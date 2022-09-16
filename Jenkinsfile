@@ -8,8 +8,10 @@ pipeline {
         }
           stage('Paramete') { 
             steps {
+                echo '${name}'
                 sh 'echo 'Hello...'
                 sh 'echo '${params['name']}''
+                
         }
     }
     }
