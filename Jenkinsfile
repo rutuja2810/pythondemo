@@ -3,10 +3,14 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'python helloworld.py' 
-                echo '${params['name']}' 
-                
+                sh 'python helloworld.py'
             }
         }
+          stage('Paramete') { 
+            steps {
+                sh 'echo 'Hello...'
+                sh 'echo '${params['name']}''
+        }
+    }
     }
  }
