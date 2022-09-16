@@ -4,8 +4,8 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'python helloworld.py' 
-                sh '${params['name']}' 
-                echo 
+                echo '${params['name']}' 
+                
             }
         }
     }
