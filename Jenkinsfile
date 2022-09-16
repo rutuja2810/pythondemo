@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'python helloworld.py' 
-                echo '${params.name}'
+                echo %name%
             }
         }
     }
